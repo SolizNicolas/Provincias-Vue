@@ -1,21 +1,27 @@
 <template>
   <div class="container">
     <br />
-    <div class="input-group mb-3 w-50 mt-3">
-      <input
-        type="text"
-        v-model="busqueda"
-        class="form-control"
-        placeholder="Ingresar Provincia"
-      />
-      <button className="btn btn-primary" @click="buscarProvincias()">
-        Buscar
-      </button>
+    <div class="row mt-3">
+      <div class="col">
+        <a href="/insertar">
+          <button class="btn btn-primary">Nueva Provincia</button>
+        </a>
+      </div>
+      <div class="col">
+        <div class="input-group mb-3 w-100">
+          <input
+            type="text"
+            v-model="busqueda"
+            class="form-control"
+            placeholder="Ingresar Provincia"
+          />
+          <button class="btn btn-primary" @click="buscarProvincias()">
+            Buscar
+          </button>
+        </div>
+      </div>
     </div>
-    <a href="/insertar">
-      <button class="btn btn-primary">Nueva Provincia</button>
-    </a>
-    <br />
+
     <br />
     <div>
       <table class="table table-bordered">

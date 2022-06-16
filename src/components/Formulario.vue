@@ -21,15 +21,15 @@
     </div>
     <div class="form-group">
       <label class="p-1">Población:</label>
-      <input type="text" v-model="poblacion" class="form-control" />
+      <input type="number" v-model="poblacion" class="form-control" />
     </div>
     <div class="form-group">
       <label class="p-1">Superficie:</label>
-      <input type="text" v-model="superficie" class="form-control" />
+      <input type="number" v-model="superficie" class="form-control" />
     </div>
     <div class="form-group">
       <label class="p-1">N° Departamentos:</label>
-      <input type="text" v-model="nroDepartamentos" class="form-control" />
+      <input type="number" v-model="nroDepartamentos" class="form-control" />
     </div>
 
     <div class="buttons form-group mt-3">
@@ -111,6 +111,7 @@ export default {
         console.log(e);
       }
       this.provincia = response;
+      window.location.href = "/";
     },
     async insertProvincia(body) {
       let url = `http://168.194.207.98:8081/api_provincia/post_provincia.php`,
@@ -132,6 +133,7 @@ export default {
         console.log(e);
       }
       this.provincia = response;
+      window.location.href = "/";
     },
   },
 };
